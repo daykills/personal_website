@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div class="row">
+      <!-- Text content on the left side -->
+      <div class="col-md-6">
+        <div class="header-space"></div>
+          <h1>Stephanie Chen</h1>
+          <p>Recent Computer Science Graduate | Software Engineer Aspirant</p><br>
+          <p>Hello! I'm Stephanie Chen, a recent graduate of Oregon State University with a Bachelor's degree in Computer Science. I'm passionate about software development and eager to embark on a career as a software engineer.</p>
+          <br>
+          <section class="skills">
+            <h5>My Skills</h5>
+            <ul>
+              <li>Languages: JavaScript, Python, C</li>
+              <li>Front-end: React, Bootstrap</li>
+              <li>Back-end: Express.js, Django, SQL, MongoDB</li>
+              <li>DevOps: Git, Docker, CI/CD</li>
+              <li>Testing: Selenium</li>
+      </div>
+
+      <!-- Image on the right side -->
+      <div class="col-md-6">
+        <img src="{% static 'self.jpeg' %}" class="rounded-image">
+      </div>
+      
+  </div>
+</div>
+<br><br>
+<div class="blue-line"></div>
+<h2 class="mt-5">Portfolio</h2>
+<hr>
+
+<div class="projects-row">
+  {% for project in projects %}
+
+  <div class="column">
+
+
+    <img src="{{ project.image.url }}" class="img-fluid">
+    {% if project.url %}
+    <a href="{{ project.url }}">
+   
+    <h5>{{ project.title }}</h5>
+    </a>
+    {% endif %}
+    <p>{{ project.description }}</p>
+
+    <div class="tech_stack"><p>{{ project.tech_stack }}</p></div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

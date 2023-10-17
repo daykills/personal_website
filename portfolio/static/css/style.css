@@ -1,0 +1,78 @@
+.navbar-nav .nav-link {
+  color: rgba(0,0,0,1);
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(0,0,0,.5);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+#blogtitle {
+  font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+  #hometext {
+      font-size: 4rem;
+  }
+  #blogdetailtitle {
+      font-size: 5rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the end (right side) */
+}
+
+.header-space {
+  flex-grow: 2;
+}
+
+.blue-line {
+  flex-grow: 0;
+  height: 5px; 
+  background-color: blue;
+} 
+
+.rounded-image {
+  width: 450px; 
+  height: 450px;
+
+  border-radius: 50%;
+
+  /* To ensure the image retains its aspect ratio */
+  object-fit: cover;
+}
+
+.projects-row {
+  display: flex; /* Sets up a flexbox layout */
+  justify-content: space-between; /* Distributes the columns evenly across the row */
+}
+
+.column {
+  flex: 0 0 32%; /* This ensures that each column takes up roughly 1/3 of the row. 32% accounts for possible margins or padding */
+  padding: 1rem; /* Optional spacing */
+  box-sizing: border-box; /* Makes sure padding is included in the width */
+}
+
+.img-fluid {
+  width: 100%; /* Ensures the image does not exceed its container's width */
+  height: 200px; /* Maintains the image's aspect ratio */
+  display: block; /* Makes sure the image takes the full width of its container */
+  margin-bottom: 1rem; /* Optional spacing between image and title */
+}
+
+.tech_stack {
+  color: darkblue;
+}
+
